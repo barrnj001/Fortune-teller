@@ -7,6 +7,7 @@ public class FortuneTellerApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
+		String Help = "Red, orange, yellow, green, blue, indigo, violet.";
 		System.out.println("A new vision befalls me. Tell me your first name!");
 		String firstName = input.nextLine();
 		
@@ -26,8 +27,9 @@ public class FortuneTellerApp {
 		System.out.println("Finally, we're getting somwhwere. If you'll be so kind, tell me you're favorite ROYGBIV color. Don't know? Ask for 'Help'");
 		String faveColor = input.nextLine();
 		
-		
-		
+		if (faveColor.equals("Help")) {
+			System.out.println(Help);
+		}
 		
 	}
 
