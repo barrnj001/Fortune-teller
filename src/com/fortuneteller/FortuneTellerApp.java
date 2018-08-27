@@ -5,25 +5,8 @@ import java.util.Scanner;
 public class FortuneTellerApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner(System.in);
-
-		String Help = "Red, Orange, Yellow, Green, Blue, Indigo, Violet.";
-
-//		String[] roygbiv = new String[7];
-//		
-//		roygbiv[0]= "Red";
-//		roygbiv[1]= "Orange";
-//		roygbiv[2]= "Yellow";
-//		roygbiv[3]= "Green";
-//		roygbiv[4]= "Blue";
-//		roygbiv[5]= "Indigo";
-//		roygbiv[6]= "Violet";
-//		
-//		int[] month = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-//				
-//		};
 
 		System.out.println("A new vision befalls me. Tell me your first name!");
 		String firstName = input.nextLine();
@@ -39,28 +22,21 @@ public class FortuneTellerApp {
 				"So, your name is " + firstName + " " + lastName + ", and you're " + userAge + " years old? Excellent");
 
 		System.out.println(
-				"Excellent! Now, I need just a bit more information from you. What number is your birth month?");
+				"Obedience is rewarded. Now, I need just a bit more information from you. What number is your birth month?");
 		int birthMonth = input.nextInt();
 		input.nextLine();
 
 		System.out.println(
 				"If you'll be so kind, tell me you're favorite ROYGBIV color, make sure the first letter is capitalized. Don't know what ROYGBIV is? Ask for 'Help'");
-		
-		do {
-			Help
-		} while (faveColor.equals("Help"))
+		String faveColor = input.nextLine();
 
-//		for (faveColor.equals("Help");;) {
-//			System.out.println(Help);
-//			System.out.println("Tell me your favorite color now.");
-//			faveColor = input.nextLine();
-//
-//			break;
-//		}
-//		else String faveColor = input.nextLine();
+		if (faveColor.equals("Help")) {
+			System.out.println("ROYGBIV");
+			System.out.println("Tell me your favorite color now.");
+			faveColor = input.nextLine();
+		}
 
-
-		System.out.println("Good job! Now I need the number of siblings you have.");
+		System.out.println("Almost there now. Patience is also rewarded! Now I need the number of siblings you have.");
 		int sibNumber = input.nextInt();
 		input.nextLine();
 
@@ -68,70 +44,70 @@ public class FortuneTellerApp {
 
 		String ryears = null;
 		if (userAge % 2 == 0) {
-			ryears = "20";
+			ryears = "20 years";
 		}
 		if (!(userAge % 2 == 0)) {
-			ryears = "when the universe ends";
+			ryears = "50 years";
 		}
 
 		// now to find vacay home
 
 		String vhome = null;
 		if (sibNumber < 0) {
-			vhome = "Travel Destination";
+			vhome = "Vesuvius";
 		}
 		if (sibNumber == 0) {
-			vhome = "Travel Destination";
+			vhome = "Paris, France";
 		}
 		if (sibNumber == 1) {
-			vhome = "Travel Destination";
+			vhome = "Cleveland, Texas";
 		}
 		if (sibNumber == 2) {
-			vhome = "Travel Destination";
+			vhome = "Sydney, Australia";
 		}
 		if (sibNumber == 3) {
-			vhome = "Travel Destination";
+			vhome = "Nagasaki, Japan";
 		}
-		if (sibNumber > 5) {
-			vhome = "Travel Destination";
+		if (sibNumber >= 4) {
+			vhome = "London, England";
 		}
 
 		// next is their car
 		String fCar = null;
-		if (faveColor == "Red") {
-			fCar = "Car";
+		if (faveColor.equals("Red")) {
+			fCar = "horse-drawn carriage.";
 		}
-		if (faveColor == "Orange") {
-			fCar = "Car";
+		if (faveColor.equals("Orange")) {
+			fCar = "teleportation.";
 		}
-		if (faveColor == "Yellow") {
-			fCar = "Car";
+		if (faveColor.equals("Yellow")) {
+			fCar = "astral projection.";
 		}
-		if (faveColor == "Green") {
-			fCar = "Car";
+		if (faveColor.equals("Green")) {
+			fCar = "a flaming chariot.";
 		}
-		if (faveColor == "Blue") {
-			fCar = "Car";
+		if (faveColor.equals("Blue")) {
+			fCar = "a normal car.";
 		}
-		if (faveColor == "Indigo") {
-			fCar = "Car";
+		if (faveColor.equals("Indigo")) {
+			fCar = "a Rolls Royce";
 		}
-		if (faveColor == "Violet") {
-			fCar = "Car";
+		if (faveColor.equals("Violet")) {
+			fCar = "sports car.";
 		}
 
 		// next is bank balance
 		String bBal = null;
-		if (birthMonth <= 4) {
-			bBal = "...well, it will be empty.";
-		}
-		if (birthMonth < 4 && birthMonth > 9) {
+		if (birthMonth >= 4 && birthMonth < 9) {
 			bBal = "$2,147,483,647";
 		}
-		if (birthMonth <= 9) {
+		if (birthMonth <= 4) {
+			bBal = "...well, it will be nothing";
+		}
+		if (birthMonth >= 9) {
 			bBal = "$9,223,372,036,854,775,807";
 		}
-
+		System.out.println("The stars have spoken!");
 		System.out.println(firstName + " " + lastName + " will retire in " + ryears + ", with " + bBal
 				+ " in the bank, a vacation home in " + vhome + ", and travel by " + fCar);
 	}
