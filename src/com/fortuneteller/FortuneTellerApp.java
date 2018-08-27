@@ -26,6 +26,8 @@ public class FortuneTellerApp {
 		int birthMonth = input.nextInt();
 		input.nextLine();
 		
+		String roygbiv = "Red, orange, yellow, green, blue, indigo, violet";
+		
 		while (true) {
 
 		System.out.println("If you'll be so kind, tell me you're favorite ROYGBIV color. Don't know? Ask for 'Help'");
@@ -33,17 +35,24 @@ public class FortuneTellerApp {
 
 		if (faveColor.equals("Help") || faveColor.equals("help")) {
 			System.out.println(Help);
+			
+			//need to make it so thing repeats question if help or not color
+		} do {
+			if (!faveColor.equals(roygbiv));
+			System.out.println("Ah, ah, ah! I said a ROYGBIV color! Please enter a ROYGBIV color. Confused? Ask for help.");
+			
+			} while (!faveColor.equals(roygbiv));
 		
-		} else {
+			if (faveColor.equals(roygbiv));
 			System.out.println("Your obedience will be rewarded. Patience.");
 			System.out.println("How many siblings do you have?");
 
 			int sibNumber = input.nextInt();
 			input.nextLine();
-			
-			
-		break;
-		}
+			 
+		
+		
+		
 		}
 
 	}
