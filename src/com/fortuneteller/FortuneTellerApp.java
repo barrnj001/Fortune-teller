@@ -27,7 +27,7 @@ public class FortuneTellerApp {
 		input.nextLine();
 
 		System.out.println(
-				"If you'll be so kind, tell me you're favorite ROYGBIV color, make sure the first letter is capitalized. Don't know what ROYGBIV is? Ask for 'Help'");
+				"If you'll be so kind, tell me you're favorite ROYGBIV color. Don't know what ROYGBIV is? Ask for 'Help'");
 		String faveColor = input.nextLine();
 
 		if (faveColor.equals("Help")) {
@@ -74,25 +74,25 @@ public class FortuneTellerApp {
 
 		// next is their car
 		String fCar = null;
-		if (faveColor.equals("Red")) {
+		if (faveColor.equalsIgnoreCase("Red")) {
 			fCar = "horse-drawn carriage.";
 		}
-		if (faveColor.equals("Orange")) {
+		if (faveColor.equalsIgnoreCase("Orange")) {
 			fCar = "teleportation.";
 		}
-		if (faveColor.equals("Yellow")) {
+		if (faveColor.equalsIgnoreCase("Yellow")) {
 			fCar = "astral projection.";
 		}
-		if (faveColor.equals("Green")) {
+		if (faveColor.equalsIgnoreCase("Green")) {
 			fCar = "a flaming chariot.";
 		}
-		if (faveColor.equals("Blue")) {
+		if (faveColor.equalsIgnoreCase("Blue")) {
 			fCar = "a normal car.";
 		}
-		if (faveColor.equals("Indigo")) {
+		if (faveColor.equalsIgnoreCase("Indigo")) {
 			fCar = "a Rolls Royce";
 		}
-		if (faveColor.equals("Violet")) {
+		if (faveColor.equalsIgnoreCase("Violet")) {
 			fCar = "sports car.";
 		}
 
@@ -107,7 +107,7 @@ public class FortuneTellerApp {
 		if (birthMonth >= 9) {
 			bBal = "$9,223,372,036,854,775,807";
 		}
-		System.out.println("The stars have spoken!");
+		System.out.println("The stars have spoken! Your fortune reads as follows:");
 		System.out.println(firstName + " " + lastName + " will retire in " + ryears + ", with " + bBal
 				+ " in the bank, a vacation home in " + vhome + ", and travel by " + fCar);
 	}
